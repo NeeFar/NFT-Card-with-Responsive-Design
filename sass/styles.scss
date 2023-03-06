@@ -1,0 +1,131 @@
+$Soft-blue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$Very-dark-blue-main: hsl(217, 54%, 11%);
+$Very-dark-blue-card: hsl(216, 50%, 16%);
+$Very-dark-blue-line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+@mixin effect-cyan {
+    a {
+        color: $White;
+        text-decoration: none;
+        transition-duration: 300ms;
+        &:hover {
+            color: $Cyan;
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $Soft-blue;
+    font-family: "Outfit", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    background-color: $Very-dark-blue-main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nft-card {
+    background-color: $Very-dark-blue-card;
+    height: 34rem;
+    width: 21.5rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    .nft-image {
+        border-radius: 1rem;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+    .nft-desc {
+        h2 {
+            @include effect-cyan();
+            margin-top: 1rem;
+        }
+        .text-desc {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+        .eth-info {
+            display: flex;
+            justify-content: space-between;
+            .stc-eth {
+                display: flex;
+                align-items: center;
+                .icon-ether {
+                    margin-right: 4px;
+                }
+                .ether {
+                    color: $Cyan;
+                    font-weight: 600;
+                }
+            }
+            .stc-time {
+                display: flex;
+                align-items: center;
+                .icon-clock {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+    footer {
+        @include effect-cyan();
+        border-top: 1px solid $Very-dark-blue-line;
+        margin-top: 10px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        img {
+            height: 2rem;
+            margin-right: 1rem;
+        }
+    }
+}
+.attribution {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nft-card {
+        width: 18rem;
+        height: 28.5rem;
+        .nft-desc {
+            h2 {
+                margin-top: 0.5rem;
+            }
+            .text-desc {
+                margin: 0.6rem 0;
+            }
+        }
+        footer {
+            margin-top: 10px;
+            padding: 10px;
+            img {
+                height: 1.8rem;
+                margin-right: 0.4rem;
+            }
+        }
+    }
+    .attribution {
+        margin-top: 12px;
+        font-size: 0.7rem;
+    }
+}

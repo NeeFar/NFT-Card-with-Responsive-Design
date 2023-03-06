@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsl(215, 51%, 70%);
+  font-family: "Outfit", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-card {
+  background-color: hsl(216, 50%, 16%);
+  height: 34rem;
+  width: 21.5rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.nft-card .nft-image {
+  border-radius: 1rem;
+}
+.nft-card .nft-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.nft-card .nft-desc h2 {
+  margin-top: 1rem;
+}
+.nft-card .nft-desc h2 a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  transition-duration: 300ms;
+}
+.nft-card .nft-desc h2 a:hover {
+  color: hsl(178, 100%, 50%);
+}
+.nft-card .nft-desc .text-desc {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+.nft-card .nft-desc .eth-info {
+  display: flex;
+  justify-content: space-between;
+}
+.nft-card .nft-desc .eth-info .stc-eth {
+  display: flex;
+  align-items: center;
+}
+.nft-card .nft-desc .eth-info .stc-eth .icon-ether {
+  margin-right: 4px;
+}
+.nft-card .nft-desc .eth-info .stc-eth .ether {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+.nft-card .nft-desc .eth-info .stc-time {
+  display: flex;
+  align-items: center;
+}
+.nft-card .nft-desc .eth-info .stc-time .icon-clock {
+  margin-right: 4px;
+}
+.nft-card footer {
+  border-top: 1px solid hsl(215, 32%, 27%);
+  margin-top: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.nft-card footer a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  transition-duration: 300ms;
+}
+.nft-card footer a:hover {
+  color: hsl(178, 100%, 50%);
+}
+.nft-card footer img {
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.attribution {
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+.attribution a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nft-card {
+    width: 18rem;
+    height: 28.5rem;
+  }
+  .nft-card .nft-desc h2 {
+    margin-top: 0.5rem;
+  }
+  .nft-card .nft-desc .text-desc {
+    margin: 0.6rem 0;
+  }
+  .nft-card footer {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .nft-card footer img {
+    height: 1.8rem;
+    margin-right: 0.4rem;
+  }
+  .attribution {
+    margin-top: 12px;
+    font-size: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
